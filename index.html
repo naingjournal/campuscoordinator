@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusCoordinator — Mae Fah Luang University Navigator</title>
+  <meta name="description" content="Find your way around Mae Fah Luang University. Search buildings, canteens, dorms, libraries, and services across the Chiang Rai campus." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+<!-- ============== Header ============== -->
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html">
+      <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <span class="title">
+        CampusCoordinator
+        <span class="subtitle">Mae Fah Luang University</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="locations.html">Locations</a>
+      <a href="map.html">Campus Map</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<!-- ============== Hero ============== -->
+<section class="hero">
+  <div class="bg">
+    <img src="assets/campus-hero.jpg" alt="Aerial view of Mae Fah Luang University campus" />
+  </div>
+  <div class="veil"></div>
+  <div class="container inner">
+    <p class="eyebrow" style="color: var(--gold-300)">Mae Fah Luang University · Chiang Rai</p>
+    <h1>
+      Find your way around campus,
+      <span class="accent">without the guesswork.</span>
+    </h1>
+    <p class="lead">
+      CampusCoordinator helps MFU students locate classrooms, dining halls,
+      dorms, and services in seconds — built by students who got lost in
+      week one.
+    </p>
+
+    <div class="search" style="max-width: 560px; margin-top: 28px;">
+      <span class="icon">🔍</span>
+      <input id="hero-search" type="text"
+             placeholder="Search a building, canteen, or service…"
+             autocomplete="off" />
+      <div id="hero-results" class="search-results" style="display:none"></div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-gold" href="locations.html">Browse all locations →</a>
+      <a class="btn btn-ghost" href="map.html">Open campus map</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Categories ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 style="font-size: 28px">Quick categories</h2>
+        <p class="muted" style="margin:0">Jump straight to the kind of place you need.</p>
+      </div>
+    </div>
+    <div id="category-grid" class="category-grid"></div>
+  </div>
+</section>
+
+<!-- ============== Featured ============== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 style="font-size: 28px">Popular with students</h2>
+        <p class="muted" style="margin:0">The spots first-years ask about most.</p>
+      </div>
+      <a href="locations.html">View all →</a>
+    </div>
+    <div id="featured-cards" class="cards"></div>
+  </div>
+</section>
+
+<!-- ============== Footer ============== -->
+<footer class="site-footer">
+  <div class="container cols">
+    <div>
+      <p style="font-family: var(--font-display); font-size: 18px; margin:0">CampusCoordinator</p>
+      <p class="muted" style="margin-top: 8px; max-width: 280px">
+        A student-built way to find your way around Mae Fah Luang University in Chiang Rai.
+      </p>
+    </div>
+    <div>
+      <p style="font-weight: 600; margin:0">Campus</p>
+      <p class="muted" style="margin-top: 8px">333 Moo 1, Thasud, Mueang Chiang Rai, 57100, Thailand</p>
+    </div>
+    <div>
+      <p style="font-weight: 600; margin:0">Get around</p>
+      <p class="muted" style="margin-top: 8px">Shuttle buses run every 10–15 minutes between dormitory zones and the academic core.</p>
+    </div>
+  </div>
+  <div class="container meta">
+    <span>© <span id="year"></span> CampusCoordinator</span>
+    <span>Made by students, for students.</span>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

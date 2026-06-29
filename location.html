@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Location — CampusCoordinator</title>
+  <meta name="description" content="Location details for a place on the Mae Fah Luang University campus." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html">
+      <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <span class="title">CampusCoordinator
+        <span class="subtitle">Mae Fah Luang University</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="locations.html">Locations</a>
+      <a href="map.html">Campus Map</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<article class="section">
+  <div class="container" id="detail-root"></div>
+</article>
+
+<footer class="site-footer">
+  <div class="container cols">
+    <div>
+      <p style="font-family: var(--font-display); font-size: 18px; margin:0">CampusCoordinator</p>
+      <p class="muted" style="margin-top: 8px; max-width: 280px">A student-built way to find your way around MFU.</p>
+    </div>
+    <div>
+      <p style="font-weight: 600; margin:0">Campus</p>
+      <p class="muted" style="margin-top: 8px">333 Moo 1, Thasud, Mueang Chiang Rai, 57100, Thailand</p>
+    </div>
+    <div>
+      <p style="font-weight: 600; margin:0">Get around</p>
+      <p class="muted" style="margin-top: 8px">Shuttle buses run every 10–15 minutes between zones.</p>
+    </div>
+  </div>
+  <div class="container meta">
+    <span>© <span id="year"></span> CampusCoordinator</span>
+    <span>Made by students, for students.</span>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/location-detail.js"></script>
+</body>
+</html>
